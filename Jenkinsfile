@@ -6,7 +6,7 @@ pipeline {
 
         environment {
 
-		name  = 'Dave'
+		name  = 'DEMO'
 		
         }
 
@@ -24,7 +24,7 @@ pipeline {
                 stage('Demo') {
                         steps {
     				echo 'Hello world'
-    				sayHello 'Dave'
+    				sayHello "${name}"
                         }
                 }
 	}
