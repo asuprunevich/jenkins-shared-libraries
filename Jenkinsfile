@@ -35,7 +35,7 @@ pipeline {
                 stage('HipChat') {
                         steps {
     				echo 'Sending notification...'
-    				HipchatBuildStartSend("${CredKeyID}, ${RoomId}")
+    				HipchatBuildStartSend("${CredKeyID}", "${RoomId}")
                         }
                 }
 		stage('log') {
