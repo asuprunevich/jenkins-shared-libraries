@@ -7,8 +7,8 @@ pipeline {
         environment {
 
 		name  = 'DEMO'
-		key = 'on3TyKN2nVF69d2jJJ2afaqEH86Vx0Yre9Nqna7V'
-		room = '4048687'
+		KeyID = 'HipchatTestKeyId'
+		RoomId = 'HipchatTestRoomId'
 		
 		
         }
@@ -35,7 +35,7 @@ pipeline {
 				script {
 					log.info 'Starting'
 					log.warning 'Nothing to do!'
-					hipchat.SendBuildStart "${key} ${room}"				
+					hipchat.SendBuildStart "${KeyID} ${RoomId}"
 				}
 			}
 		}

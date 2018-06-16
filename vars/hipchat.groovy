@@ -1,13 +1,13 @@
 #!/usr/bin/env groovy
 
-def SendBuildStart call(String key, int room) {
+def SendBuildStart call(String KeyId, int RoomId) {
 
 	hipchatSend
 		color: 'YELLOW',
-		credentialId: key,
+		credentialId: KeyId,
 		message: 'Build has been started',
 		notify: true,
-		room: room,
+		room: RoomId,
 		sendAs: 'JenkinsSharedLibrary',
 		server: 'api.hipchat.com',
 		v2enabled: true
