@@ -29,7 +29,7 @@ pipeline {
                         steps {
     				echo 'Hello world'
     				//sayHello "${name}, ${secondname}" 
-    				sayHello('${name}', '${secondname}') 
+    				sayHello("${name}", "${secondname}") 
                         }
                 }
                 stage('HipChat') {
