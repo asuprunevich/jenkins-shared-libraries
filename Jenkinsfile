@@ -29,8 +29,10 @@ pipeline {
                 }
 		stage('log') {
 			steps {
-				log.info 'Starting'
-				log.warning 'Nothing to do!'
+				script {
+					log.info 'Starting'
+					log.warning 'Nothing to do!'
+				}
 			}
 		}
 	}
