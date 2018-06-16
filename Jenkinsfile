@@ -6,7 +6,8 @@ pipeline {
 
         environment {
 
-		name  = 'DEMO'
+		name  = 'Bla'
+		secondname = 'Hehe'
 		CredKeyID = 'HipchatTestKeyId'
 		RoomId = '4048687'
 		
@@ -27,7 +28,7 @@ pipeline {
                 stage('Demo') {
                         steps {
     				echo 'Hello world'
-    				sayHello "${name}"
+    				sayHello "${name} ${secondname}" 
                         }
                 }
                 stage('HipChat') {
