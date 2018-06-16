@@ -30,12 +30,17 @@ pipeline {
     				sayHello "${name}"
                         }
                 }
+                stage('HipChat') {
+                        steps {
+    				echo 'Sending notification...'
+    				HipchatBuildStartSend "${KeyID} ${RoomId}"
+                        }
+                }
 		stage('log') {
 			steps {
 				script {
 					log.info 'Starting'
 					log.warning 'Nothing to do!'
-					hipchat.SendBuildStart "${KeyID} ${RoomId}"
 				}
 			}
 		}
