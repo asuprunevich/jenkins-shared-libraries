@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-def SendBuildStart call(String KeyId, int RoomId) {
+def SendBuildStart(String KeyId, int RoomId) {
 
 	hipchatSend
 		color: 'YELLOW',
