@@ -1,10 +1,10 @@
 #!/usr/bin/env groovy
 
-def call(String KeyId, int RoomId) {
+def call(String CredKeyId, int RoomId) {
 
 	hipchatSend(
 		color: 'YELLOW',
-		credentialId: KeyId,
+		credentialId: CredKeyId,
 		message: 'Build has been started',
 		notify: true,
 		room: RoomId,

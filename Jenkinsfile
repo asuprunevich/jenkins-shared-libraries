@@ -7,8 +7,8 @@ pipeline {
         environment {
 
 		name  = 'DEMO'
-		KeyID = 'HipchatTestKeyId'
-		RoomId = 'HipchatTestRoomId'
+		CredKeyID = 'HipchatTestKeyId'
+		RoomId = '4048687'
 		
 		
         }
@@ -33,7 +33,7 @@ pipeline {
                 stage('HipChat') {
                         steps {
     				echo 'Sending notification...'
-    				HipchatBuildStartSend "${KeyID} ${RoomId}"
+    				HipchatBuildStartSend "${CredKeyID} ${RoomId}"
                         }
                 }
 		stage('log') {
