@@ -2,7 +2,7 @@
 
 def call(String KeyId, int RoomId) {
 
-	hipchatSend
+	hipchatSend(
 		color: 'YELLOW',
 		credentialId: KeyId,
 		message: 'Build has been started',
@@ -11,4 +11,5 @@ def call(String KeyId, int RoomId) {
 		sendAs: 'JenkinsSharedLibrary',
 		server: 'api.hipchat.com',
 		v2enabled: true
+	)
 }
